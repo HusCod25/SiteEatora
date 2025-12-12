@@ -23,12 +23,12 @@ export const metadata: Metadata = {
     title: "EatoraAI™ | Intelligent restaurant growth",
     description:
       "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
-    url: "/",
+    url: "https://www.eatora.tech",
     siteName: "EatoraAI",
     type: "website",
     images: [
       {
-        url: "/seo/og-image.png",
+        url: "https://www.eatora.tech/testimonials/tom-plate.jpg",
         width: 1200,
         height: 630,
         alt: "EatoraAI meal assistant preview",
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "EatoraAI™ | Intelligent restaurant growth",
     description:
       "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
-    images: ["/seo/og-image.png"],
+    images: ["https://www.eatora.tech/testimonials/tom-plate.jpg"],
   },
 };
 

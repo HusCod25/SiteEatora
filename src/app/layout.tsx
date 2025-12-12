@@ -15,9 +15,32 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "EatoraAI™ | Intelligent restaurant growth",
   description:
-    "EatoraAI™ is the modern AI copilot for restaurants—optimize menus, marketing, and guest loyalty from one clean dashboard.",
+    "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
   icons: {
     icon: "/favicon.ico",
+  },
+  openGraph: {
+    title: "EatoraAI™ | Intelligent restaurant growth",
+    description:
+      "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
+    url: "/",
+    siteName: "EatoraAI",
+    type: "website",
+    images: [
+      {
+        url: "/seo/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "EatoraAI meal assistant preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "EatoraAI™ | Intelligent restaurant growth",
+    description:
+      "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
+    images: ["/seo/og-image.png"],
   },
 };
 

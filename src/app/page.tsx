@@ -570,15 +570,16 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    <button
-                      className={`mt-6 w-full rounded-full px-3 py-2 text-xs font-semibold transition ${
+                    <a
+                      href="https://app.eatora.tech/register"
+                      className={`mt-6 w-full rounded-full px-3 py-2 text-center text-xs font-semibold transition ${
                         plan.highlighted
                           ? "bg-white text-slate-950 hover:bg-slate-100"
                           : "border border-white/20 text-white hover:border-white"
                       }`}
                     >
                       {plan.buttonText ?? "Choose plan"}
-                    </button>
+                    </a>
                   </div>
                 );
               })}

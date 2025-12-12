@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   description:
     "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon-2025.ico",
+    shortcut: "/favicon-2025.ico",
+    apple: "/favicon-2025.ico",
   },
   openGraph: {
     title: "EatoraAI™ | Intelligent restaurant growth",

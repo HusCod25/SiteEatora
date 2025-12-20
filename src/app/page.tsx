@@ -1,8 +1,7 @@
 'use client';
 
 import Image from "next/image";
-import { useState } from "react";
-import { MouseEvent } from "react";
+import { MouseEvent, useEffect, useState } from "react";
 
 const features = [
   {
@@ -219,6 +218,21 @@ const scrollToSection = (id: string) => {
 
 export default function Home() {
   const [billingCycle, setBillingCycle] = useState<"monthly" | "yearly">("monthly");
+  const [cookieChoice, setCookieChoice] = useState<"accepted" | "declined" | null>(null);
+
+  useEffect(() => {
+    const stored = typeof window !== "undefined" ? localStorage.getItem("cookie-consent") : null;
+    if (stored === "accepted" || stored === "declined") {
+      setCookieChoice(stored);
+    }
+  }, []);
+
+  const handleCookieChoice = (choice: "accepted" | "declined") => {
+    setCookieChoice(choice);
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cookie-consent", choice);
+    }
+  };
   const handleAnchorClick = (
     event: MouseEvent<HTMLAnchorElement>,
     id: string,
@@ -631,6 +645,42 @@ export default function Home() {
           </section>
         </main>
 
+        {cookieChoice === null && (
+          <div className="fixed bottom-4 left-4 right-4 z-30 sm:left-auto sm:right-4 sm:max-w-md">
+            <div className="rounded-2xl border border-white/10 bg-slate-900/90 p-4 shadow-xl shadow-emerald-500/15 backdrop-blur">
+              <div className="flex items-start gap-3">
+                <div className="mt-0.5 text-lg">🍪</div>
+                <div className="flex-1 space-y-2 text-sm text-slate-200">
+                  <p className="font-semibold text-white">We use cookies</p>
+                  <p className="text-slate-300">
+                    We rely on essential and analytics cookies to improve your experience. Read our
+                    <a href="/cookie-policy" className="ml-1 font-semibold text-emerald-200 underline-offset-4 hover:underline">
+                      Cookie Policy
+                    </a>
+                    .
+                  </p>
+                  <div className="flex flex-wrap gap-2 pt-1">
+                    <button
+                      type="button"
+                      onClick={() => handleCookieChoice("declined")}
+                      className="rounded-full border border-white/20 px-4 py-2 text-xs font-semibold text-white transition hover:border-white/40"
+                    >
+                      Decline
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => handleCookieChoice("accepted")}
+                      className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-slate-950 transition hover:bg-slate-100"
+                    >
+                      Accept
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
         <footer className="border-t border-white/5 bg-slate-950/60">
           <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
             <p>EatoraAI™ © {new Date().getFullYear()} · All rights reserved.</p>
@@ -648,15 +698,31 @@ export default function Home() {
                 className="transition hover:text-white"
               >
                 Pricing
-          </a>
-          <a
+              </a>
+              <a
                 href="#testimonials"
                 onClick={(event) => handleAnchorClick(event, "testimonials")}
                 className="transition hover:text-white"
-          >
+              >
                 Stories
-          </a>
-        </div>
+              </a>
+              <a
+                href="https://app.eatora.tech/terms"
+                className="transition hover:text-white"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Terms
+              </a>
+              <a
+                href="https://app.eatora.tech/privacy"
+                className="transition hover:text-white"
+                rel="noreferrer"
+                target="_blank"
+              >
+                Privacy
+              </a>
+            </div>
           </div>
         </footer>
       </div>

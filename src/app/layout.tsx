@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EatoraAI™ | Intelligent restaurant growth",
+  title: "EatoraAI™ | Your AI cooking assistant",
   description:
     "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
   icons: {
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     apple: "/munchies-logo.svg",
   },
   openGraph: {
-    title: "EatoraAI™ | Intelligent restaurant growth",
+    title: "EatoraAI™ | Your AI cooking assistant",
     description:
       "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
     url: "https://www.eatora.tech",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "EatoraAI™ | Intelligent restaurant growth",
+    title: "EatoraAI™ | Your AI cooking assistant",
     description:
       "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
     images: ["/seo/og-image.jpg"],

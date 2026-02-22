@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 120">
+  <!-- European Commission Logo -->
+  <rect width="400" height="120" fill="white"/>
+  
+  <!-- EU Flag -->
+  <rect x="10" y="20" width="100" height="80" fill="#003399"/>
+  <g id="stars">
+    <!-- 12 EU stars in circle -->
+    <circle cx="60" cy="60" r="3" fill="#FFD700"/>
+    <circle cx="75" cy="65" r="3" fill="#FFD700"/>
+    <circle cx="82" cy="78" r="3" fill="#FFD700"/>
+    <circle cx="78" cy="92" r="3" fill="#FFD700"/>
+    <circle cx="60" cy="95" r="3" fill="#FFD700"/>
+    <circle cx="42" cy="92" r="3" fill="#FFD700"/>
+    <circle cx="38" cy="78" r="3" fill="#FFD700"/>
+    <circle cx="45" cy="65" r="3" fill="#FFD700"/>
+    <circle cx="60" cy="62" r="3" fill="#FFD700"/>
+    <circle cx="68" cy="70" r="3" fill="#FFD700"/>
+    <circle cx="68" cy="85" r="3" fill="#FFD700"/>
+    <circle cx="52" cy="85" r="3" fill="#FFD700"/>
+  </g>
+  
+  <!-- EC Symbol (stylized E) -->
+  <path d="M125,35 L145,35 L145,45 L135,45 L135,55 L143,55 L143,65 L135,65 L135,75 L145,75 L145,85 L125,85 Z" fill="#003399"/>
+  <path d="M150,35 C165,35 175,45 175,60 C175,75 165,85 150,85 L150,75 C160,75 165,70 165,60 C165,50 160,45 150,45 Z" fill="#003399"/>
+  
+  <!-- European Commission Text -->
+  <text x="190" y="50" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#003399">European</text>
+  <text x="190" y="75" font-family="Arial, sans-serif" font-size="18" font-weight="normal" fill="#003399">Commission</text>
+</svg>

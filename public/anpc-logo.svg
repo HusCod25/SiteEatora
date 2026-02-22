@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 380 100">
+  <!-- ANPC Official Logo -->
+  <rect width="380" height="100" fill="white"/>
+  <g id="anpc-badge">
+    <!-- Coat of Arms placeholder circle -->
+    <circle cx="40" cy="50" r="30" fill="#FFD700" stroke="#C41E3A" stroke-width="2"/>
+    <path d="M40,25 L45,35 L40,75 L35,35 Z" fill="#C41E3A"/>
+    
+    <!-- ANPC Text -->
+    <text x="85" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#003399">ANPC</text>
+    <text x="85" y="60" font-family="Arial, sans-serif" font-size="9" fill="#003399">AUTORITATEA NAȚIONALĂ PENTRU</text>
+    <text x="85" y="72" font-family="Arial, sans-serif" font-size="9" fill="#003399">PROTECȚIA CONSUMATORILOR</text>
+    <text x="85" y="88" font-family="Arial, sans-serif" font-size="12" font-style="italic" fill="#C41E3A">Te respectă</text>
+  </g>
+</svg>

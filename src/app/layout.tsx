@@ -17,9 +17,13 @@ export const metadata: Metadata = {
   description:
     "EatoraAI is an AI-powered meal assistant that generates personalized meals from user-selected ingredients, supports macro-based targets, and helps users eat smarter and save time.",
   icons: {
-    icon: "/munchies-logo.svg",
-    shortcut: "/munchies-logo.svg",
-    apple: "/munchies-logo.svg",
+    icon: [
+      { url: "/EatoraAILogo.svg", type: "image/svg+xml" },
+      { url: "/app-icon-192.png", sizes: "192x192", type: "image/png" },
+      { url: "/app-icon-512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: ["/EatoraAILogo.svg"],
+    apple: ["/apple-touch-icon.png"],
   },
   openGraph: {
     title: "EatoraAI™ | Your AI cooking assistant",

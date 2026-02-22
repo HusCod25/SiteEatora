@@ -80,7 +80,8 @@ const planTiers: Plan[] = [
     ],
     monthlyPrice: 9.99,
     yearlyPrice: 99.9,
-    badge: "Current plan",
+    badge: "Most popular",
+    highlighted: true,
   },
   {
     name: "Unlimited Plan",
@@ -94,8 +95,6 @@ const planTiers: Plan[] = [
     ],
     monthlyPrice: 29.99,
     yearlyPrice: 299.9,
-    badge: "Most popular",
-    highlighted: true,
   },
 ];
 
@@ -252,12 +251,12 @@ export default function Home() {
             <div>
               <div className="flex items-center gap-3">
         <Image
-                  src="/munchies-logo.svg"
-                  alt="EatoraAI™ logo"
-                  width={48}
-                  height={48}
-          priority
-        />
+            src="/EatoraAILogo.svg"
+            alt="EatoraAI™ logo"
+            width={48}
+            height={48}
+    priority
+  />
                 <span className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   <span className="bg-gradient-to-r from-emerald-300 via-lime-200 to-amber-200 bg-clip-text text-transparent">
                     EatoraAI™
@@ -682,45 +681,78 @@ export default function Home() {
         )}
 
         <footer className="border-t border-white/5 bg-slate-950/60">
-          <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-10 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
-            <p>EatoraAI™ © {new Date().getFullYear()} · All rights reserved.</p>
-            <div className="flex justify-center gap-6 text-slate-400 sm:justify-end">
+          <div className="mx-auto flex max-w-6xl flex-col gap-6 px-4 py-10">
+            {/* Main footer content */}
+            <div className="flex flex-col gap-4 text-center text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between sm:text-left">
+              <p>EatoraAI™ © {new Date().getFullYear()} · All rights reserved.</p>
+              <div className="flex justify-center gap-6 text-slate-400 sm:justify-end">
+                <a
+                  href="#features"
+                  onClick={(event) => handleAnchorClick(event, "features")}
+                  className="transition hover:text-white"
+                >
+                  Product
+                </a>
+                <a
+                  href="#pricing"
+                  onClick={(event) => handleAnchorClick(event, "pricing")}
+                  className="transition hover:text-white"
+                >
+                  Pricing
+                </a>
+                <a
+                  href="#testimonials"
+                  onClick={(event) => handleAnchorClick(event, "testimonials")}
+                  className="transition hover:text-white"
+                >
+                  Stories
+                </a>
+                <a
+                  href="https://app.eatora.tech/terms"
+                  className="transition hover:text-white"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Terms
+                </a>
+                <a
+                  href="https://app.eatora.tech/privacy"
+                  className="transition hover:text-white"
+                  rel="noreferrer"
+                  target="_blank"
+                >
+                  Privacy
+                </a>
+              </div>
+            </div>
+            
+            {/* Consumer protection badges */}
+            <div className="flex flex-wrap items-center justify-center gap-8 border-t border-white/5 pt-6">
               <a
-                href="#features"
-                onClick={(event) => handleAnchorClick(event, "features")}
-                className="transition hover:text-white"
-              >
-                Product
-              </a>
-              <a
-                href="#pricing"
-                onClick={(event) => handleAnchorClick(event, "pricing")}
-                className="transition hover:text-white"
-              >
-                Pricing
-              </a>
-              <a
-                href="#testimonials"
-                onClick={(event) => handleAnchorClick(event, "testimonials")}
-                className="transition hover:text-white"
-              >
-                Stories
-              </a>
-              <a
-                href="https://app.eatora.tech/terms"
-                className="transition hover:text-white"
-                rel="noreferrer"
+                href="https://anpc.ro/"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+                title="Autoritatea Națională pentru Protecția Consumatorilor"
               >
-                Terms
+                <img
+                  src="https://anpc.ro/galerie/LOGO_SAL%20ANPC_RO.png"
+                  alt="ANPC - Protecția Consumatorilor"
+                  className="h-16 w-auto bg-white px-2 py-1 rounded"
+                />
               </a>
               <a
-                href="https://app.eatora.tech/privacy"
-                className="transition hover:text-white"
-                rel="noreferrer"
+                href="https://ec.europa.eu/consumers/odr"
                 target="_blank"
+                rel="noopener noreferrer"
+                className="transition-opacity hover:opacity-80"
+                title="Soluționarea Online a Litigiilor - European Commission"
               >
-                Privacy
+                <img
+                  src="https://ec.europa.eu/info/sites/default/files/logo-ce-horizontal-en-quadri-hr.png"
+                  alt="European Commission - ODR Platform"
+                  className="h-16 w-auto bg-white px-2 py-1 rounded"
+                />
               </a>
             </div>
           </div>

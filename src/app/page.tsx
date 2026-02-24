@@ -736,7 +736,7 @@ export default function Home() {
                 title="Autoritatea Națională pentru Protecția Consumatorilor"
               >
                 <img
-                  src="https://anpc.ro/galerie/LOGO_SAL%20ANPC_RO.png"
+                  src="/anpc.svg"
                   alt="ANPC - Protecția Consumatorilor"
                   className="h-16 w-auto bg-white px-2 py-1 rounded"
                 />
@@ -749,7 +749,7 @@ export default function Home() {
                 title="Soluționarea Online a Litigiilor - European Commission"
               >
                 <img
-                  src="https://ec.europa.eu/info/sites/default/files/logo-ce-horizontal-en-quadri-hr.png"
+                  src="/EuCom.svg"
                   alt="European Commission - ODR Platform"
                   className="h-16 w-auto bg-white px-2 py-1 rounded"
                 />

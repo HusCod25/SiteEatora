@@ -276,6 +276,14 @@ export default function Home() {
                 Home
               </a>
               <a
+                href="https://discord.gg/dkrn5r5kZ9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="transition hover:text-white"
+              >
+                Discord
+              </a>
+              <a
                 href="#about"
                 onClick={(event) => handleAnchorClick(event, "about")}
                 className="transition hover:text-white"
@@ -308,7 +316,15 @@ export default function Home() {
 
         <main className="relative mx-auto flex max-w-6xl flex-col gap-24 px-4 pb-16 pt-28 sm:px-6 lg:px-8 lg:pb-20 lg:pt-32">
           <section id="home" className="scroll-mt-32 text-center sm:text-left">
-            <div className="mt-8 flex flex-col gap-4">
+            <div className="mt-4 flex flex-col gap-4">
+              <div className="flex justify-center">
+                <a
+                  href="https://app.eatora.tech/signin"
+                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/10 px-10 py-4 text-xl font-semibold text-white shadow-md transition hover:border-white hover:bg-white/20"
+                >
+                  Go to the app
+                </a>
+              </div>
               <h1 className="text-5xl font-semibold leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
                 Hungry and uninspired?
               </h1>
@@ -465,11 +481,23 @@ export default function Home() {
                 See real examples of meals generated from everyday ingredients.
               </p>
             </div>
-            <div className="rounded-3xl border border-dashed border-white/20 bg-white/5 p-8 text-center text-sm font-semibold uppercase tracking-[0.25em] text-slate-400">
-              Video Placeholder
-              <span className="mt-3 block text-xs normal-case tracking-normal text-slate-500">
-                Drop your walkthrough or demo clip here.
-              </span>
+            <div className="rounded-3xl border border-dashed border-white/20 bg-white/5 p-4 sm:p-6 lg:p-8">
+              <div className="relative w-full overflow-hidden rounded-2xl bg-black/60 pb-[56.25%]">
+                <iframe
+                  className="absolute inset-0 h-full w-full border-0"
+                  src="https://www.youtube.com/embed/q4qs-L6HRvQ"
+                  title="EatoraAI product walkthrough"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+              <p className="mt-4 text-center text-xs font-medium uppercase tracking-[0.25em] text-slate-400">
+                Product walkthrough
+              </p>
+              <p className="mt-1 text-center text-xs text-slate-500">
+                Learn how EatoraAI™ turns your ingredients into ready-to-cook recipes.
+              </p>
             </div>
           </section>
 
@@ -616,8 +644,18 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-white">Talk to us</h3>
                 <p className="text-slate-300">
                   eatora.app@gmail.com
-          </p>
-        </div>
+                </p>
+                <p className="text-slate-300">
+                  <a
+                    href="https://discord.gg/dkrn5r5kZ9"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-emerald-300 underline underline-offset-4 hover:text-emerald-200"
+                  >
+                    Join our Discord
+                  </a>
+                </p>
+              </div>
               <form className="space-y-4">
                 <input
                   type="text"
